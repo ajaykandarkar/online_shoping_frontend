@@ -5,7 +5,7 @@ const handleLogin = () =>{
   const uri = process.env.REACT_APP_BASE_URL;
   console.log("uri : ",uri)
   axios
-  .post(`${uri}login`)
+  .post(`${uri}/login`)
   .then((response) => {
     console.log("response of ",response)
   })
