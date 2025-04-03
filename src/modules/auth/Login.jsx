@@ -3,9 +3,12 @@ import axios from 'axios';
 
 const handleLogin = () =>{
   const uri = process.env.REACT_APP_BASE_URL;
-  console.log("uri : ",uri)
+  console.log("uri : ",`${uri}/login`)
   axios
-  .post(`${uri}/login`)
+  .post(`${uri}/login`,{
+    email:"ajay@gmail.com",
+    password:"1234"
+})
   .then((response) => {
     console.log("response of ",response)
   })
