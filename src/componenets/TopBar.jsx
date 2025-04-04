@@ -1,22 +1,31 @@
 import React from 'react'
+
 import './TopBar.css';
-import { Link } from 'react-router-dom';
 export const TopBar = () => {
  
    return (
-        <div className="announcement-bar d-flex justify-content-between align-items-center">
-            <div className="announcement-text text-align-center">
+
+    <div className="container-fluid">
+    <div className='row bg-dark'>
+        <div className='col-md-4'></div>
+        <div className='col-md-6 mt-2'>
+            <div className="announcement-text text-white">
                 Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 
-                <Link to="#" className="shop-now"> ShopNow</Link>
+                <a href="/shop" className="shop-now"> ShopNow</a>
             </div>
+        </div>
+        <div className='col-md-1'>
             <div className="language-dropdown">
-                <select className="form-select bg-dark text-white border-0">
-                    <option>English</option>
-                    <option>Hindi</option>
-                    <option>Spanish</option>
+                <select className="form-select topbar_shadow">
+                    <option className='option_topbar'>English</option>
+                    <option className='option_topbar'>Hindi</option>
+                    <option className='option_topbar'>Spanish</option>
                 </select>
             </div>
         </div>
+    </div>
+</div>
+
   )
 }
 

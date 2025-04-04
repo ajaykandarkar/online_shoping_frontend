@@ -8,7 +8,9 @@
 
 .announcement-text {
     display: inline-block;
-    
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
 }
 
 .shop-now {
@@ -17,6 +19,12 @@
     margin-left: 5px;
 }
 
+a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+}
 .shop-now:hover {
     color: gray;
 }
@@ -29,6 +37,28 @@
     appearance: none;
 }
 
-.language-dropdown {
-    margin-left: auto;
+
+.language-dropdown select {
+    background-color: transparent; /* Keeps background transparent */
+    color: white; /* Makes text white */
+    padding: 10px;
+    font-size: 16px;
+    appearance: none; /* Removes default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Custom arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='18px' height='18px'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
 }
+
+.option_topbar{
+    color: black;
+}
+
+.topbar_shadow{
+    box-shadow: none;
+}
+

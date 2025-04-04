@@ -1,0 +1,53 @@
+.footer {
+    background-color: #000;
+    color: white;
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.input-group {
+    max-width: 250px;
+}
+
+.input-group input {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group button {
+    background: white;
+    border: none;
+    color: black;
+}
+
+.store-badge {
+    width: 100px;
+    height: auto;
+}
+
+.social-icons a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+.footer-line {
+    border-color: rgba(255, 255, 255, 0.2);
+}
