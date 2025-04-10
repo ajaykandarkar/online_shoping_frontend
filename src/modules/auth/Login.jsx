@@ -27,7 +27,7 @@ export const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     const uri = process.env.REACT_APP_BASE_URL;
-
+       
     try {
       const response = await axios.post(`${uri}/login`, credentials);
 
@@ -97,9 +97,9 @@ export const Login = () => {
                 <button type="submit" className="btn btn-danger">
                   Login
                 </button>
-                <a href="#" className="margin-login-anchor">
+                {/* <a href="#" className="margin-login-anchor">
                   Forgot Password?
-                </a>
+                </a> */}
               </div>
             </form>
           </div>
