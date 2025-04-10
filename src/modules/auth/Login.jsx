@@ -9,29 +9,31 @@ import side_img from "../../assets/images/side_image.png";
 import "./Login.css";
 
 export const Login = () => {
-  const navigate = useNavigate(); // Used for navigation
+  const navigate = useNavigate(); 
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Handle input change
+
   const handleChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+    setCredentials({
+      ...credentials,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  // Handle login function
   const handleLogin = async (e) => {
     e.preventDefault();
     const uri = process.env.REACT_APP_BASE_URL;
 
     try {
       const response = await axios.post(`${uri}/login`, credentials);
-      
+
       if (response.data?.token) {
-        localStorage.setItem("token", response.data.token); // Store token
-        navigate("/dashboard"); // Redirect to dashboard
+        localStorage.setItem("token", response.data.token); 
+        navigate("/dashboard"); 
       } else {
         setErrorMessage("Invalid credentials. Please try again.");
       }
@@ -47,7 +49,6 @@ export const Login = () => {
       <Navbar />
       <div className="container-fluid mt-5">
         <div className="row">
-          {/* Image Section */}
           <div className="col-md-5 m-0 p-0">
             <img
               style={{ width: "705px", height: "681px" }}
@@ -58,12 +59,10 @@ export const Login = () => {
 
           <div className="col-md-1 "></div>
 
-          {/* Login Form Section */}
           <div className="col-md-5" style={{ marginTop: "227px" }}>
             <h1>Log in to Exclusive</h1>
             <p>Enter your details below</p>
 
-            {/* Show Error Message */}
             {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
             <form onSubmit={handleLogin}>
@@ -95,8 +94,12 @@ export const Login = () => {
               </div>
 
               <div className="d-flex">
-                <button type="submit" className="btn btn-danger">Login</button>
-                <a href="#" className="margin-login-anchor">Forgot Password?</a>
+                <button type="submit" className="btn btn-danger">
+                  Login
+                </button>
+                <a href="#" className="margin-login-anchor">
+                  Forgot Password?
+                </a>
               </div>
             </form>
           </div>

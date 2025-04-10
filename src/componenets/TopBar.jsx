@@ -1,6 +1,6 @@
 import React from 'react'
-
 import './TopBar.css';
+import { Link } from 'react-router-dom';
 export const TopBar = () => {
  
    return (
@@ -11,7 +11,7 @@ export const TopBar = () => {
         <div className='col-md-6 mt-2'>
             <div className="announcement-text text-white">
                 Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! 
-                <a href="/shop" className="shop-now"> ShopNow</a>
+                <Link to="/shop" className="shop-now"> ShopNow</Link>
             </div>
         </div>
         <div className='col-md-1'>
